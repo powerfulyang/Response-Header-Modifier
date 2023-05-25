@@ -1,8 +1,8 @@
-import { queryClient } from '@/utils';
 import { QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import browser from 'webextension-polyfill';
+import { queryClient } from '@/utils';
 
 browser.tabs.query({ active: true, currentWindow: true }).then(() => {
   const root = document.getElementById('root');
